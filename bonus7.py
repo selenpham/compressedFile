@@ -1,16 +1,17 @@
 import PySimpleGUI as gui
 from zip_creator import make_archive
 
-
+# Tạo các elements nhập file cần zip
 label1 =gui.Text("Select files to compress: ")
 input1 =gui.Input()
 choose_button1 = gui.FilesBrowse("Choose",key= "files")
 
-
+# Tạo dest lưu file cần zip
 label2 =gui.Text("Select destination folder: ")
 input2 =gui.Input()
 choose_button2 = gui.FolderBrowse("Choose",key="folder")
 
+# Tạo nút compress và thông báo khi zip thành công
 compress_button = gui.Button("Compress")
 output_label = gui.Text(key="output", text_color= "red")
 
